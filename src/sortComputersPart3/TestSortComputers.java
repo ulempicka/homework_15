@@ -36,6 +36,7 @@ public class TestSortComputers {
                 comparator = new RamMemoryComparator();
                 break;
             case SORT_NAME:
+                comparator = new NameComparator();
                 break;
             default:
                 System.out.println("niepoprawny typ sortowania");
