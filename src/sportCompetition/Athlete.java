@@ -1,6 +1,6 @@
 package sportCompetition;
 
-public class Athlete {
+public class Athlete implements Comparable<Athlete> {
     private String firstName;
     private String lastName;
     private int score;
@@ -30,5 +30,16 @@ public class Athlete {
                 ", lastName='" + lastName + '\'' +
                 ", score=" + score +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Athlete athlete) {
+        if(this.score > athlete.score){
+            return 1;
+        }else if (this.score == athlete.score){
+            return this.lastName.compareTo(athlete.lastName);
+        }else {
+            return -1;
+        }
     }
 }
