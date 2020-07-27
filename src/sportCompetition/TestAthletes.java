@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.util.List;
 
 public class TestAthletes {
-//    public static void main(String[] args) {
-//        List<Athlete> athletes = AthleteGenerator.createAthlete();
-//        System.out.println(athletes);
-//
+    public static void main(String[] args) {
+        List<Athlete> athletes = AthleteGenerator.createAthlete();
+        System.out.println(athletes);
+
 //        String fileName = "src\\sportCompetition\\stats.csv";
 //        File newFile = new File(fileName);
 //
@@ -25,6 +25,6 @@ public class TestAthletes {
 //        } catch (IOException e) {
 //            System.err.println("nie mozna odczytac pliku");
 //        }
-//    }
+    }
 }
 

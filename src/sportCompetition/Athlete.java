@@ -1,5 +1,7 @@
 package sportCompetition;
 
+import java.util.Objects;
+
 public class Athlete implements Comparable<Athlete> {
     private String firstName;
     private String lastName;
@@ -41,5 +43,20 @@ public class Athlete implements Comparable<Athlete> {
         }else {
             return -1;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Athlete athlete = (Athlete) o;
+        return score == athlete.score &&
+                Objects.equals(firstName, athlete.firstName) &&
+                Objects.equals(lastName, athlete.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, score);
     }
 }
