@@ -36,7 +36,7 @@ public class Athlete implements Comparable<Athlete> {
 
     @Override
     public int compareTo(Athlete athlete) {
-        if(this.score > athlete.score){
+        if(this.score < athlete.score){
             return 1;
         }else if (this.score == athlete.score){
             return this.lastName.compareTo(athlete.lastName);

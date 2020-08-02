@@ -10,18 +10,16 @@ public class AthleteGenerator {
         List<Athlete> athletes = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Tworzę zawodnika");
-        String userInput = "";
-        int i = 0;
-        while (!(userInput.equals("stop"))) {
+        String userInput;
+
+        while (!(userInput = scanner.nextLine()).equals("stop")) {
             System.out.println("Podaj wynik kolejnego gracza (lub stop):");
-            userInput = scanner.nextLine();
             String[] split = userInput.split(" ");
             Athlete athlete = new Athlete(split[0], split[1], Integer.parseInt(split[2]));
             athletes.add(athlete);
-            i++;
         }
-        scanner.close();
         Collections.sort(athletes);
+
         return athletes;
     }
 }
